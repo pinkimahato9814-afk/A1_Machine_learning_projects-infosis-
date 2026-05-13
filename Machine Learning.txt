@@ -1,0 +1,483 @@
+Machine Learning
+-------------------
+-- Disease Prediction
+
+-- Customer Churn
+
+-- Prediction and Recommendation
+
+1. Supervised Learning
+- When we have labeled data
+- Data having both features and target
+- Output Known
+- Salary Prediction, Disease Prediction
+
+	a. Regression
+	- If we need to predict or recommend continuous data then use
+	  regression.
+	- Salary, Whether, Student Marks, ....
+	1. Linear Regression - 97%
+	2. Polynomial Regression
+	3. Random Forest Regressor - 98%
+	4. XGBoost Regressor - 99%
+	5. Decision Tree Regressor
+	6. K-Nearest Regressor
+	7. Support Vector Regressor
+
+	b. Classification
+	- If we need to predict or recommend class data (yes/no, true/false,
+	  0/1, 0/1/2/3/4). Binary class or Multi Class.
+	- Disease Prediction, Customer Churn, Students Grade, Employee 	Termination/Active Status, ....
+
+	1. Logistic Regression
+	2. KNN (K Nearest Neighbors)
+	3. SVM (Support Vector Machine)
+	4. Random Forest Classifier
+	5. Decision Tree Classifier
+	6. XGBoost Classifier
+
+
+2. Unsupervised Learning
+- When we have unlabeled data
+- Only features
+- Target separate on the basis of Elbow Method
+
+	a. Clustering
+	- If we need to segment data into multiple clusters.
+	- Bank Loan System, Customer Segmentation
+	1. K-Means Clustering
+	2. PCA (Principle Component Analysis)
+	3. Agglomerative Clustering
+	4. Hierarchical Clustering
+
+
+3. Reinforcement Learning
+	- Self Learning Algorithm
+
+AI
+-------
+1. ANN (Artificial Neural Network)
+	- Data -> CSV, Excel, Database
+
+2. CNN (Convolutional Neural Network)
+	- Image, Video
+
+
+Activation Function
+---------------------
+1. Sigmoid Function
+
+2. ReLU (Rectified Linear Unit)
+
+sub1 -> 10, sub2-> 60, sub3 -> 70 --> Average (46.67) -> D
+
+High Weight
+------------------
+Propagation(Epoch)
+-------------------
+1. Forward Propagation -> D
+
+2. Backward Propagation -> Send Data -> Lower weight
+
+
+Process of Machine Learning
+---------------------------------
+1. Import Packages (Scikit-Learning)
+2. EDA
+3. Extract Feature and Target
+	- All feature must be independent to each other.
+	- Target must be dependent to all features.
+4. Train Test Split
+	Rule: 80/20 (80% train, 20% Test), 70/30, 60/40, 50/50
+5. Feature Scaling
+	Standardization
+	---------------------
+	1. Standard Scaler
+
+        Standardization
+       ---------------------
+       1. Standard Scaler
+       - If our data contains outliers or data can have outliers in future
+       - 3 to -3
+       Formula
+       -------------
+        (Xi - mean)/Sd
+
+
+	2. Min Max Scaler
+         
+       - If our data does not contains outliers or data cannot have outliers in future
+       - -1 to 1
+       Formula
+      ------------
+      - (Xi - min_value)/(max_val - min_val)
+
+	
+	Label Encoding
+	------------------
+	1. Label Encoder
+        - Map () -> Automatic
+
+        2. One-Hot Encoder
+        - Used while creating data pipeline
+
+
+6. Define Machine Learning Model
+7. Fit data into model (Feature Training and Target Training)
+8. Predict Data (Feature Testing)
+9. Metrics (Accuracy)
+10. Visualization
+11. New Data Prediction
+
+-------------------------------------------------------------------------------------
+Logistic regression  explanation
+
+
+
+
+
+---------------------------------------------------------------------------------------------------
+KNN (K-Nearest Neighbors)
+---------------------------
+Laziest Algorithm
+
+Math
+--------
+Euclidean Distance
+
+Clustering Algorithm
+
+Logistic Regression -> Binary Classification
+
+KNN -> Multi-Class Classificationsimulated anneling
+
+Optimal Number of Neighbor = 3
+
+Error Rate
+------------
+range (1 to 20) -> 1 - 21
+
+Student Grade Prediction
+---------------------------
+A, B, C, D, Fail
+
+error_rate = []
+for i in k_range(1, 21):
+	knn = KNeighborsClassifier(n_neighbors=i)
+	knn.fit(X_train_scale, Y_train)
+	knn_pred = knn.predict(X_test_scale)
+	error_rate.append(np.mean(knn_pred != Y_test))
+
+Total Record -> 395
+
+80% -> 316 -> Training
+X_train (158)
+Y_train (158)
+
+20% -> 79 -> Test
+X_test (38)
+Y_test (41)
+
+Total number of Wrong Predicted Value / Total Values
+
+k = 1
+
+sub1=50, sub2=60, sub3=10, sub4=5 = 31.25% -> Fail
+
+A -> 10
+B => 5
+C -> 15
+D -> 5
+Fail -> 6
+
+10 + 5 + 15 + 5 / 41
+= 0.85
+
+k = 2
+
+sub1=80, sub2=60, sub3=80, sub4=90 => A
+
+A -> 15
+B => 5
+C -> 15
+D -> 5
+Fail -> 1
+
+5 + 15 + 5 + 1 / 41
+= 0.63
+
+
+sub1=40, sub2=10, sub3=10, sub4=5 => Fail
+
+A -> 15
+B => 5
+C -> 15
+D -> 1
+Fail -> 5
+
+15 + 5 + 15 + 1/41 = 0.87
+
+O_R => 0.63
+
+k=3
+0.02
+....
+
+k=20
+
+
+
+k => 3 to 9
+
+<3 -> model overfit
+
+>17 -> model underfit
+
+
+
+----------------------------------------------------------------------------------------------
+SVM (supervised learning)
+-------------------------------------------------------------
+
+SVM (Support Vector Machine)
+--------------------------------
+Supervised Learning Algorithm
+ 
+Classification and Regression both
+ 
+SVC (Support Vector Classifier)
+SVR (Support Vector Regressor)
+ 
+It only works with small dataset.
+ 
+200000 rows
+ 
+5000 rows sample
+ 
+ 
+Kernel
+-----------
+Linear -> if data linearly separable
+ 
+RBF (Radial Basis Function) -> if data is not linearly separable
+ 
+Gamma -> (0.0001, 0.001, 0.1, 1.0, Scale) used for creating curve line
+C (0.0001, 0.001, 0.1, 1.0) -> Margin Gap
+ 
+ 
+Classification Report
+Confusion Matrix
+ 
+
+
+
+----------------------------------------------------------------
+
+PCA
+----------------------------------------------------------------
+PCA (Principle Component Analysis)
+------------------------------------
+
+Dimensity Reduction
+ 
+Convert multi dimension image to 2D image.
+ 
+Principle Components
+------------------------
+Number of features = Number of Components
+ 
+4
+X     Y	
+PC1, PC2, PC3, PC4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+KNN (K-Nearest Neighbors)
+---------------------------
+Laziest Algorithm
+
+Math
+--------
+Euclidean Distance
+
+Clustering Algorithm
+
+Logistic Regression -> Binary Classification
+
+KNN -> Multi-Class Classificationsimulated anneling
+
+Optimal Number of Neighbor = 3
+
+Error Rate
+------------
+range (1 to 20) -> 1 - 21
+
+Student Grade Prediction
+---------------------------
+A, B, C, D, Fail
+
+error_rate = []
+for i in k_range(1, 21):
+	knn = KNeighborsClassifier(n_neighbors=i)
+	knn.fit(X_train_scale, Y_train)
+	knn_pred = knn.predict(X_test_scale)
+	error_rate.append(np.mean(knn_pred != Y_test))
+
+Total Record -> 395
+
+80% -> 316 -> Training
+X_train (158)
+Y_train (158)
+
+20% -> 79 -> Test
+X_test (38)
+Y_test (41)
+
+Total number of Wrong Predicted Value / Total Values
+
+k = 1
+
+sub1=50, sub2=60, sub3=10, sub4=5 = 31.25% -> Fail
+
+A -> 10
+B => 5
+C -> 15
+D -> 5
+Fail -> 6
+
+10 + 5 + 15 + 5 / 41
+= 0.85
+
+k = 2
+
+sub1=80, sub2=60, sub3=80, sub4=90 => A
+
+A -> 15
+B => 5
+C -> 15
+D -> 5
+Fail -> 1
+
+5 + 15 + 5 + 1 / 41
+= 0.63
+
+
+sub1=40, sub2=10, sub3=10, sub4=5 => Fail
+
+A -> 15
+B => 5
+C -> 15
+D -> 1
+Fail -> 5
+
+15 + 5 + 15 + 1/41 = 0.87
+
+O_R => 0.63
+
+k=3
+0.02
+....
+
+k=20
+
+
+
+k => 3 to 9
+
+<3 -> model overfit
+
+>17 -> model underfit
+
+------------------------------------------------------------------------------------------
+KMeans clustering (unsupervised learning)
+
+------------
+
+- Agglomerative Clustering
+
+- Hierarchical Clustering
+ 
+Unsupervised Learning Algorithm
+ 
+features
+ 
+target -> number of clusters
+ 
+Elbow Method
+
+-------------------
+
+center point -> distance measure
+
+sum of distance
+
+sum of distance / total_number_of_data
+ 
+Customer segmentation
+ 
+range(1, 21)
+ 
+ 
+fit(x_train, y_train)
+
+predict(x_test)
+ 
+fit(x_train)
+
+predict(x_test)
+ 
+clusters
+ 
+ 
+
+
+
+
